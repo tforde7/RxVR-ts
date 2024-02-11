@@ -3,9 +3,8 @@ import { Group, Raycaster, Vector3 } from 'three';
 import { useXR, Interactive } from '@react-three/xr';
 import { useFrame } from '@react-three/fiber';
 import { MutableRefObject, useCallback, useRef, useState } from 'react';
-import React from 'react';
 
-export function TeleportIndicator(props: any) {
+export function TeleportIndicator() {
 	return (
 		<>
 			<pointLight position={[0, 0.5, 0]} args={[0xff00ff, 2, 0.6]} />

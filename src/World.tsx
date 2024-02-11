@@ -3,7 +3,6 @@ import Ground from "./Ground";
 import { Sky } from "@react-three/drei";
 import { Controllers, VRButton, XR } from "@react-three/xr";
 import TeleportTravel from "./TeleportTravel";
-import React from "react";
 
 // function Floor(props) {
 // 	return (
