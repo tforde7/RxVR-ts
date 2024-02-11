@@ -1,8 +1,9 @@
+import World from "./World"
+
 const App = () => {
   return (
-    <div>
-      <h1>Hello, world!</h1>
-    </div>
+    <World></World>
+
   )
 }
 
