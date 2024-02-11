@@ -118,7 +118,7 @@ export function Teleport(props: TeleportationPlaneProps) {
         }}
       >
         <mesh rotation={[-Math.PI / 2, 0, 0]} scale={[1000, 1000, 1000]}>
-          <planeBufferGeometry attach="geometry" args={[1, 1]} />
+          <planeGeometry attach="geometry" args={[1, 1]} />
           <meshBasicMaterial attach="material" transparent opacity={0} />
         </mesh>
       </Interactive>
