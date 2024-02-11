@@ -1,8 +1,18 @@
 import { Canvas } from "@react-three/fiber";
 import Ground from "./Ground";
-import { OrbitControls, Sky } from "@react-three/drei";
+import { Sky } from "@react-three/drei";
 import { Controllers, VRButton, XR } from "@react-three/xr";
-import { Teleport } from "./Teleport";
+import TeleportTravel from "./TeleportTravel";
+import React from "react";
+
+// function Floor(props) {
+// 	return (
+// 		<mesh rotation={[-Math.PI / 2, 0, 0]} {...props}>
+// 			<planeBufferGeometry args={[10, 10]} attach="geometry" />
+// 			<meshBasicMaterial attach="material" color={'#25282F'} />
+// 		</mesh>
+// 	);
+// }
 
 const World = () => {
   return (
@@ -10,12 +20,13 @@ const World = () => {
     <VRButton></VRButton>
     <Canvas>
         <XR>
+            <TeleportTravel useNormal={true}>
+                <Ground></Ground>
+            </TeleportTravel>
             <Controllers></Controllers>
-            <Teleport leftHand></Teleport>
         <Sky></Sky>
         <ambientLight></ambientLight>
-        <OrbitControls></OrbitControls>
-        <Ground></Ground>
+        {/* <OrbitControls></OrbitControls> */}
 
         </XR>
 
