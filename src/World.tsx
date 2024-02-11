@@ -1,7 +1,7 @@
 import { Canvas } from "@react-three/fiber";
 import Ground from "./Ground";
 import { OrbitControls, Sky } from "@react-three/drei";
-import { Controllers, TeleportationPlane, VRButton, XR } from "@react-three/xr";
+import { Controllers, VRButton, XR } from "@react-three/xr";
 import { Teleport } from "./Teleport";
 
 const World = () => {

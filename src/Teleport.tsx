@@ -1,5 +1,5 @@
 import { useThree } from "@react-three/fiber";
-import { Interactive, useXR } from "@react-three/xr";
+import { Interactive } from "@react-three/xr";
 import { useState } from "react";
 import { Vector3 } from "three";
 import { useTeleport } from "./useTeleport";
@@ -15,7 +15,6 @@ const MARKER_SIZE = 0.25;
 export function Teleport(props: TeleportationPlaneProps) {
   const { teleportTo } = useTeleport();
   const [intersection, setIntersection] = useState<Vector3 | null>(null);
-  const { controllers } = useXR();
   const [size, setSize] = useState(MARKER_SIZE);
   const maxDistanceTeleport = props.maxDistance || 10;
   const { camera } = useThree();
